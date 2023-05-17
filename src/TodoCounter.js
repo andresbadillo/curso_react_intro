@@ -10,7 +10,7 @@ function TodoCounter({ total, completed }) {
   return (
     <>
       {total === completed && (
-        <h1 className="TodoCounter">¡Felicidades, completaste todos las tareas!</h1>
+        <h1 className="TodoCounter">¡Felicidades, no tienes tareas pendientes!</h1>
       )}
       {total !== completed && (
         <h1 className="TodoCounter">
