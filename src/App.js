@@ -4,7 +4,6 @@ import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
-import './App.css';
 
 const defaultTodos = [
   { text: 'Responder a la SSPD', completed: false },
