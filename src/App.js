@@ -8,8 +8,8 @@ import { CreateTodoButton } from './CreateTodoButton';
 const defaultTodos = [
   { text: 'Estudiar inglés', completed: true },
   { text: 'Entrenar pierna', completed: false },
-  { text: 'Estudiar frances', completed: true },
-
+  { text: 'Hacer mercado', completed: true },
+  { text: 'Entrenar pecho-espalda', completed: false },
 ];
 
 function App() {
@@ -18,6 +18,14 @@ function App() {
 
   const completedTodos = todos.filter(todo => !!todo.completed).length; /* !! - devuelve un boleano */
   const totalTodos = todos.length;
+
+  const searchedTodos = todos.filter(
+    (todo) => {
+      const todoText = todo.text.toLowerCase();
+      const searchText = searchValue.toLowerCase();
+      return todoText.includes(searchText);
+    }
+  );
 
   console.log(`Buscando TODOs de ${searchValue}`);
 
@@ -31,7 +39,7 @@ function App() {
       />
 
       <TodoList>
-        {defaultTodos.map(todo => (
+        {searchedTodos.map(todo => (
           <TodoItem 
             key={todo.text} 
             text={todo.text}
