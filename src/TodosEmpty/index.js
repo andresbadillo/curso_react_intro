@@ -4,7 +4,7 @@ import './TodosEmpty.css';
 
 function TodosEmpty() {
   return (
-    <p>Crea tu primero TODO!!</p>
+    <p>Crea tu primer TODO!!</p>
   )
 }
 
