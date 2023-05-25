@@ -1,13 +1,7 @@
 import React from 'react';
 import './TodoForm.css'
-import { TodoContext } from '../TodoContext';
 
-function TodoForm() {
-    const {
-        addTodo,
-        setOpenModal,
-    } = React.useContext(TodoContext);
-
+function TodoForm({ addTodo, setOpenModal }) {
     const [newTodoValue, setNewTodoValue] = React.useState('');
 
     const onSubmit = (event) => {
@@ -31,7 +25,7 @@ function TodoForm() {
                 placeholder='Hacer compras'
                 value={newTodoValue}
                 onChange={onChange}
-                required
+                required    
             />
             <div className='TodoForm-buttonContainer'>
                 <button 
