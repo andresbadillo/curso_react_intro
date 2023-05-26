@@ -5,22 +5,28 @@ function TodoList({
   children, 
   error, 
   loading, 
+  totalTodos,
   onError, 
   onLoading, 
-  onEmptyTodos, 
-  searchedTodos, 
+  onEmptyTodos,
+  onEmptySearchResults,
+  searchedTodos,
+  searchText,
   render
 }) {
+  const renderFunc = children || render;
+
   return (
-    <div>
+    <section>
     {error && onError()}
     {loading && onLoading()}
-    {(!loading && searchedTodos.length === 0) && onEmptyTodos()}
-    {searchedTodos.map(render)}
+    {(!loading && !totalTodos) && onEmptyTodos()}
+    {(!!totalTodos && !searchedTodos.length) && onEmptySearchResults(searchText)}
+    {searchedTodos.map(renderFunc)}
       <ul className='TodoList'>
         {children}
       </ul>
-    </div>
+    </section>
   )
 }
 
