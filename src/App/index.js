@@ -11,7 +11,7 @@ import { CreateTodoButton } from '../CreateTodoButton';
 import { TodoForm } from '../TodoForm';
 import { Modal } from '../Modal';
 import { TodoHeader } from '../TodoHeader';
-import { ChangeALertWithStorageListener } from '../ChangeALert';
+import { ChangeAlert } from '../ChangeALert';
 
 function App() {
   const {
@@ -86,7 +86,7 @@ function App() {
         </Modal>
       )}
 
-      <ChangeALertWithStorageListener 
+      <ChangeAlert 
         sincronize={sincronizeTodos}
       />
 
