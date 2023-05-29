@@ -5,15 +5,19 @@ import './ChangeAlert.css'
 function ChangeAlert({ show, toggleShow }) {
     if (show) {
         return (
-            <div className='reload-container'>
-                <p>Hubo cambios</p>
-                <button 
-                    className='reload-button reload-button--add'
-                    type='submit'
-                    onClick={() => toggleShow(false)}>
-                    Recargar
-                </button>
+            <div className='ChangeAlert-bg'>
+                <div className='ChangeAlert-container'>
+                    <p>Parece que cambiaste tus TODO's en otro pestaña o ventana del navegador</p>
+                    <p>¿Quieres recargar para sincronizar tus TODO's?</p>
+                    <button 
+                        className='reload-button'
+                        type='submit'
+                        onClick={() => toggleShow(false)}>
+                        Recargar
+                    </button>
+                </div>
             </div>
+            
         );   
     } else {
         return null;

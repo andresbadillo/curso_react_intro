@@ -22,7 +22,7 @@ function TodoList({
     {loading && onLoading()}
     {(!loading && !totalTodos) && onEmptyTodos()}
     {(!!totalTodos && !searchedTodos.length) && onEmptySearchResults(searchText)}
-    {searchedTodos.map(renderFunc)}
+    {(!loading && !error) && searchedTodos.map(renderFunc)}
       <ul className='TodoList'>
         {children}
       </ul>
