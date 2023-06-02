@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/curso_react_intro/static/css/main.ffc42736.css",
-    "main.js": "/curso_react_intro/static/js/main.d25d3e5d.js",
+    "main.js": "/curso_react_intro/static/js/main.8ddf2070.js",
     "index.html": "/curso_react_intro/index.html",
     "static/media/delete.svg": "/curso_react_intro/static/media/delete.7018c4465589031bd51c8efbe21df9ca.svg",
     "static/media/check.svg": "/curso_react_intro/static/media/check.e9a948bba52a34123d2ed7aeda0ea495.svg",
     "main.ffc42736.css.map": "/curso_react_intro/static/css/main.ffc42736.css.map",
-    "main.d25d3e5d.js.map": "/curso_react_intro/static/js/main.d25d3e5d.js.map"
+    "main.8ddf2070.js.map": "/curso_react_intro/static/js/main.8ddf2070.js.map"
   },
   "entrypoints": [
     "static/css/main.ffc42736.css",
-    "static/js/main.d25d3e5d.js"
+    "static/js/main.8ddf2070.js"
   ]
 }
